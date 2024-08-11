@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Inspiring Quotes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        #quote {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Get a Random Inspiring Quote</h1>
+    <div id="quote">Click the button to see an inspiring quote!</div>
+    <button onclick="showRandomQuote()">Get Quote</button>
+
+    <script>
+        const quotes = [
+            "One of the best mods I've ever seen.",
+            "You're the glue that holds this community together.",
+            "Your leadership makes everything better.",
+            "This server runs smoothly because of your hard work.",
+            "You're not just a mod, you're an inspiration.",
+            "Thank you for making this space welcoming for everyone.",
+            "Your dedication keeps the server thriving.",
+            "A true role model in the community.",
+            "Your presence is a beacon of positivity.",
+            "This place wouldn't be the same without you."
+        ];
+
+        function showRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').textContent = quotes[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
